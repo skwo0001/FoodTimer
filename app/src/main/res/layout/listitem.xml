@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/LinearFav"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/listcard"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        app:srcCompat="@drawable/alarm" />
+
+
+    <TextView
+        android:id="@+id/favFood"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        android:text="Title"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/fav_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_gravity="center_vertical"
+        app:srcCompat="@drawable/ic_favorite" />
+
+
+</LinearLayout>
