@@ -13,6 +13,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -28,7 +30,7 @@ public class CategoryFragment extends Fragment {
 
     View view;
     Context context;
-    GridView gridView;
+    RecyclerView recyclerView;
     private DataBaseHelper db;
 
     @Nullable
@@ -43,8 +45,9 @@ public class CategoryFragment extends Fragment {
         db = new DataBaseHelper(context);
 
         CatAdapter catAdapter = new CatAdapter(context,arrayFromCursor(db.getCategory()));
-        gridView = view.findViewById(R.id.gridview);
-        gridView.setAdapter(catAdapter);
+        recyclerView = view.findViewById(R.id.foodcatRV);
+        recyclerView.setLayoutManager(new LinearLayoutManager(context));
+        recyclerView.setAdapter(catAdapter);
 
         setHasOptionsMenu(true);
         return view;
